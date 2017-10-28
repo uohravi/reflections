@@ -1,0 +1,56 @@
+How did viewing a diff between two version of a file help you to see
+the bug that was introduced?
+As the diff file show differences between two file only, first at glance
+we can saw the changes in the file and find out typo that we have done
+based on error or by looking every mismatch line.
+q2) How could having easy access to entire history of a file make you a 
+more efficient programmer in long term?
+- I think, if we have entire history of a file, then maintainance and 
+changes in existing file become easy task as any changes which cause 
+undesirable result can esily identified and fixed.
+
+q3) What Do you think pros and cons of of manually choosing when to create 
+a commit, like you do in git, vs having version automatically saved, like Google Docs does?
+Pros (git) - User have control over different version of file.
+			 It easy to differentiate between particular commit and comapre file
+			 hence increase productivity for software development.
+			 Simple and do not require dedicated software to store file
+			 Not neccessory connetion required
+
+Cons (git) - As user prone to error, so more error if user will not handle correctly
+
+Pros (Google Docs) - Automaticaly save file, hence less user error.
+
+Cons (Google Docs) - Required network connection(online only).
+					 Since automatically saving so difficult to find proper point 
+					 to differentiate between version because of gaping.
+
+Why do you think some version control systems, like Git, allow saving multiple 
+files in one commit, while others, like Google Docs, treat each file separately?
+I think, allowing multiple files in one commit is great to seperate completely 
+difference between two commit and for interrelated file. But on the other hand 
+worry about size of file need to maintain.
+
+How can you use the commands git log and git diff to view the history of files?
+- First to use git log or git diff command, we need a repository. We an create a new repository 
+or copy existing repository. 
+In git we have command git clone, use to copy the entire repository (entire repository means including history).
+eg- to copy astroid repository i.e. .git file
+ git clone https://github.com/udacity/asteroids.git
+ once copy go to the directory using cd. 
+ Now to see all the commit history we use command git log.
+ type - git log
+ to Check the difference between two version, 
+ In git we use commit id to find out difference between two versions as git maintain version for each commit.
+ to do so use git diff command.
+ git diff commit_id_1 commit_id_2
+ eg - git diff f19cb1b80fe27e938e4d72770ca0a42f25e99ecc b0678b161fcf74467ed3a63110557e3d6229cfa6
+
+ How might using version control make you more confident to make changes that could break something?
+
+ - By using proper commit(saving different version) for different feature, now it is very easy to 
+ go back to previous version where it was working fine and the compare it with the version which break something.
+ Very interesting, the facility to go back and do something without need of a connection in git marvelous!! Love it.
+
+ Now that you have your workspace set up, what do you want to try using Git for?
+ Once the workspace had set up, i would like to use git for version control by creating repository and updating it.
