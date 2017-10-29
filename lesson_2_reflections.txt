@@ -10,3 +10,45 @@ What happens when you initialize a repository? Why do you need to do it?
  snapshot of all the file after git commit had issued. 
  Staging area is used to specify set of file modified which represent the a single logic. so when we see the log,
  it easy to search for a file which might have cause the error by looking into commit message and modified file.
+
+ How can you use the staging area to make sure you have one commit per logical change?
+ ---
+    By using git diff and git diff --staged we can see what is difference between working directory,
+ staging area and repository. Where git diff --staged show difference betwen staging and repository and
+ represetn the one logical changes.
+ git diff represet differenece between staging and working directory, so when there is no difference between
+ working directory and staging area(git diff) and there is differrence between staging and repository (git diff --staged)
+ and per logic is defined and working then it will define a commit per logic.
+
+ What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+ ---
+    1) IF we are going to existing code bas of program which i am not sure will work fine or not
+    2) Goint to convert the language (eg - c to java or python to java)
+    3) Want to do some experimental work
+
+In the above case branches will be hlepful as for each of the scenario we will create branch and any chages in branch not
+reflect to original so original still work without any worry as well in future if we want to modify original branch we can do
+that without need to worry for all the branches need not to update for the current changes in original branch. Laater we can merge
+the branches with original branch.
+
+How do the diagrams help you visualize the branch structure?
+---
+	The diagrams, shows how each commit is related to its parent commit and follow the concept of reachability.
+To visualise about branches and commit in branches as well as commit in master can show the complete picture where 
+we are and what kind of conflict we may get in future if we add something in master and branch as well.
+
+git checkout -b branch_name - to make a branch at a particular commit is really wonderfull feature supoorted by git.
+and allow multiple developer to work at the same time on different feature.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+---
+	Merging Two branches together will create a new commit merge commit which will point to both branches chain of commit and hence
+allow to combine content of both branches changes into a single one.
+Representig it with the diagram help to understand what is going to be happend after merging the brances and how we are 
+accessing the previous commit of branches.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+---
+	In some scenario where we added the few line of code as a function or something like that it is fantastic feature to automaticaly merge comare to
+manual and it but in case of ambiguity the merging might be annoying and do not know what will be the final result and it is good to go for mannual.
+In m
